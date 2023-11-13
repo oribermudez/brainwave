@@ -11,10 +11,16 @@ module.exports = withMT({
     extend: {
       backgroundImage: {
         'login': "url('/assets/background.png')",
+        'hero': "url('/assets/hero.png')",
       },
       colors: {
-        emerald: "#04CCC0",
-        royal: "#211A6C"
+        emerald: {
+          DEFAULT: "#04CCC0",
+          light: "#00C1B8",
+          dark: "#05b3a7",
+        },
+        royal: "#211A6C",
+        powderBlue: "#A8CBF3",
       }
     },
   },
