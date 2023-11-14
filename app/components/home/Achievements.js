@@ -1,7 +1,6 @@
 import React from "react";
 import Card from "./AchievementCard";
 import achievements from "../../data-mocks/achievements";
-import { Carousel } from "@material-tailwind/react";
  
 const Achievements = () => {
  return(

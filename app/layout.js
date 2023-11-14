@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Brainwave',
-  description: 'JavaScript Leaning Platform',
+  description: 'JavaScript Learning Platform',
 }
 
 export default function RootLayout({ children }) {
