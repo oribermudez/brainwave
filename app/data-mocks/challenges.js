@@ -3,14 +3,14 @@ const challenges = [
     id: "challenge1",
     name: "Even or Odd",
     url: "https://www.codewars.com/kata/53da3dbb4a5168369a0000fe",
-    image: "/assets/Easy.png",
+    image: "/assets/easy.png",
     level: 1,
   },
   {
     id: "challenge2",
     name: "Price of Mangoes",
     url: "https://www.codewars.com/kata/57a77726bb9944d000000b06",
-    image: "/assets/Easy.png",
+    image: "/assets/easy.png",
     level: 1,
   },
   {
@@ -24,7 +24,7 @@ const challenges = [
     id: "challenge4",
     name: "Object Matrix",
     url: "/functions",
-    image: "/assets/Advance.png",
+    image: "/assets/advance.png",
     level: 0,
   },
 ];
