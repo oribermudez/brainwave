@@ -2,7 +2,7 @@ const modules = [
   {
     id: "module1",
     name: "JavaScript Basics",
-    url: "/functions",
+    url: "/javascript-basics",
     image: "/assets/unit1.png",
     progress: 100,
   },

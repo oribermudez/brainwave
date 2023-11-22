@@ -21,7 +21,10 @@ module.exports = withMT({
         },
         royal: "#211A6C",
         powderBlue: "#A8CBF3",
-      }
+      },
+      minHeight: {
+        80: '82.1vh',
+      },
     },
   },
   plugins: [],
