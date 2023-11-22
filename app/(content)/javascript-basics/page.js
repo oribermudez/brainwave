@@ -14,13 +14,13 @@ const Page = () => {
           <h1 className="text-6xl font-bold text-center mb-12 text-royal">JavaScript Basics</h1>
           <div className="text-sm text-gray-700">
             <p>
-              In this foundational module, you'll immerse yourself in the essence of JavaScript. Mastery of these concepts
+              In this foundational module, you&apos;ll immerse yourself in the essence of JavaScript. Mastery of these concepts
               unlocks pathways to advanced problem-solving and logical thinking, shaping the foundation for your future role
-              as a software developer. Ready yourself for a fundamental dive into the heart of JavaScript's core principles. 
+              as a software developer. Ready yourself for a fundamental dive into the heart of JavaScript&apos;s core principles. 
             </p>
           </div>
           <Link
-            href="/javascript-basics/what-is-javascript"
+            href="/javascript-basics/javascript-intro"
             className="mt-12 bg-[#29DDDE] text-white font-semibold px-4 py-2 rounded hover:bg-cyan-400 w-full flex gap-4 justify-center items-center"
           >
             Start

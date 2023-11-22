@@ -9,11 +9,11 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div className="bg-royal h-20 w-full flex items-center justify-center px-32 text-white">  
+    <div className="bg-royal h-20 w-full flex items-center justify-center px-32 text-white z-10">  
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
           <Link href="/">
-              <Image src="/assets/Logo.png" width={21} height={11} alt="logo" className="mx-2 " priority />
+              <Image src="/assets/Logo.png" width={21} height={16} alt="logo" className="mx-2 " priority />
           </Link>
           <Typography
             variant="small"

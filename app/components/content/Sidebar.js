@@ -14,7 +14,7 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`fixed w-80 bg-[#FDFDFD] border border-gray-300 min-h-80 transform ${
+      className={`fixed w-80 bg-[#FDFDFD] border border-gray-300 min-h-90 transform ${
         isSidebarVisible ? "" : "-translate-x-full"
       } transition-transform`}
     >

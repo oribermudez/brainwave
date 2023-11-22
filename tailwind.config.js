@@ -24,6 +24,7 @@ module.exports = withMT({
       },
       minHeight: {
         80: '82.1vh',
+        90: '95vh',
       },
     },
   },

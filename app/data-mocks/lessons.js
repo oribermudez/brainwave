@@ -1,8 +1,8 @@
 const lessons = [
   {
-    name: "What is JavaScript?",
+    name: "JavaScript Intro",
     progress: 100,
-    url: "/javascript-basics/what-is-javascript",
+    url: "/javascript-basics/javascript-intro",
   },
   {
     name: "Variables",
