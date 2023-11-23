@@ -41,7 +41,7 @@ const Page = () => {
           JavaScript was born in 1995, originally going by the name LiveScript. While it might share a bit of its name with Java, it&apos;s
           important to know that JavaScript is a whole different language from Java. Now, let&apos;s see an official definition:
         </p>
-        <p className="bg-emerald/20 p-8 text-teal-800 rounded my-8">
+        <p className="bg-emerald/20 p-6 text-royal rounded my-8">
           <strong>JavaScript</strong> is a dynamic, lightweight, interpreted, and high-level programming language that uses first class functions.
         </p>
         <p className="my-8">
@@ -50,11 +50,9 @@ const Page = () => {
           code on the fly. This real-time translation allows for quick and dynamic execution of programs.
         </p>
         <p className="my-8">
-          Notably, JavaScript boasts the distinction of being a language with <strong>first-class functions</strong>. In practical
-          terms, this means that functions are treated akin to any other variable. They can be seamlessly passed as arguments to
-          other functions, returned as values from functions, and even assigned to variables. This characteristic flexibility
-          empowers developers, allowing them to employ functions dynamically within their code, enhancing the language&apos;s
-          expressiveness and adaptability.
+          JavaScript uses <strong>first-class functions</strong>. This means that functions are treated like any other variable.
+          They can be seamlessly passed as arguments to other functions, returned as values from functions, and even assigned
+          to variables.
         </p>
         <div className="flex justify-center items-center my-8">
           <Image src="/assets/js-versatility.gif" width={600} height={263} alt="JavaScript Logo" />
@@ -64,6 +62,21 @@ const Page = () => {
           used across different domains, including back-end development and mobile app development. It enables developers to
           create interactive and dynamic content, manipulate the Document Object Model (DOM), and execute code on both the client
           and server sides.
+        </p>
+        <h3 className="text-royal font-bold text-2xl my-8">What is ECMAScript?</h3>
+        <p className="bg-emerald/20 p-8 text-royal rounded my-8">
+          ECMAScript (ES), is a scripting language specification that provides the rules and guidelines
+          for JavaScript. 
+        </p>
+        <p className="my-8">
+          JavaScript follows a set of rules and guidelines known as ECMAScript. It acts as a standardized blueprint, enforcing
+          consistency in the implementation of JavaScript across different platforms and browsers. It ensures that no matter where
+          your website is viewed, whether on Chrome, Firefox, or Safari, the JavaScript code behaves consistently.
+        </p>
+        <p className="my-8">
+          The ECMAScript standard is typically updated annually. Developers and language designers actively contribute to these
+          proposals, and the ECMAScript updates aim to enhance the language&apos;s capabilities, improve developer productivity,
+          and address emerging challenges in software development.
         </p>
       </div>
     </div>

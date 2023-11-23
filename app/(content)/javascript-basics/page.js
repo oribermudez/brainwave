@@ -27,7 +27,7 @@ const Page = () => {
           </Link>
           <Link
           href="/"
-            className="mt-6 bg-gray-300 text-white font-semibold px-4 py-2 rounded hover:bg-cyan-400 w-full flex gap-4 justify-center items-center"
+            className="mt-6 bg-gray-300 text-white font-semibold px-4 py-2 rounded hover:bg-gray-400 w-full flex gap-4 justify-center items-center"
           >
             Go Back
           </Link>
