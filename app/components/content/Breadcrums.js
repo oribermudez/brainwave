@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Breadcrumbs = () => {
   return (
-    <BreadcrumbsComponent fullWidth>
+    <BreadcrumbsComponent fullWidth className="!hover:text-emerald">
       <Link href="/" className="opacity-60">
         Home
       </Link>

@@ -2,6 +2,8 @@ import Image from "next/image";
 
 import Sidebar from "@/app/components/content/Sidebar";
 import Breadcrumbs from "@/app/components/content/Breadcrums";
+import Quiz from "@/app/components/content/Quiz";
+import quizzes from "@/app/data-mocks/quizzes";
 
 const Page = () => {
   return (
@@ -78,6 +80,27 @@ const Page = () => {
           proposals, and the ECMAScript updates aim to enhance the language&apos;s capabilities, improve developer productivity,
           and address emerging challenges in software development.
         </p>
+        <h3 className="text-royal font-bold text-2xl my-8">Quiz</h3>
+        <Quiz
+          question={quizzes.javascript.question}
+          options={quizzes.javascript.options}
+          correctOption={quizzes.javascript.correctAnswer}
+        />
+        <Quiz
+          question={quizzes.interpreted.question}
+          options={quizzes.interpreted.options}
+          correctOption={quizzes.interpreted.correctAnswer}
+        />
+        <Quiz
+          question={quizzes.firstClass.question}
+          options={quizzes.firstClass.options}
+          correctOption={quizzes.firstClass.correctAnswer}
+        />
+        <Quiz
+          question={quizzes.ecmascript.question}
+          options={quizzes.ecmascript.options}
+          correctOption={quizzes.ecmascript.correctAnswer}
+        />
       </div>
     </div>
   );
