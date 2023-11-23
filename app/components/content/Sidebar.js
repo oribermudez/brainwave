@@ -21,7 +21,7 @@ const Sidebar = () => {
       <button onClick={toggleSidebar}>
         <Image
           src={`/assets/${
-            isSidebarVisible ? "hide-button" : "right-button"
+            isSidebarVisible ? "hide-button" : "list-button"
           }.png`}
           width={41}
           height={41}

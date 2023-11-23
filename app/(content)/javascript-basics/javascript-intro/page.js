@@ -1,5 +1,7 @@
-import Sidebar from "@/app/components/content/Sidebar";
 import Image from "next/image";
+
+import Sidebar from "@/app/components/content/Sidebar";
+import Breadcrumbs from "@/app/components/content/Breadcrums";
 
 const Page = () => {
   return (
@@ -8,6 +10,9 @@ const Page = () => {
         <Sidebar />
       </div>
       <div className="h-full col-span-4 col-start-3 my-6">
+        <div className="mt-8 mb-14">
+          <Breadcrumbs />
+        </div>
         <div className="flex items-center">
           <h3 className="text-royal font-bold text-3xl">JavaScript Intro</h3>
           <span className="mx-4 text-royal font-bold">|</span>
