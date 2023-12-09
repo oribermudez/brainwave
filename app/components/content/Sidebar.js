@@ -32,7 +32,7 @@ const Sidebar = () => {
       <h3 className="text-xl text-left pl-12 text-gray-900 pb-8 pt-2 border-b border-gray-300">
         JavaScript Basics
       </h3>
-      <div className="flex flex-col p-8 pl-12">
+      <div className="flex flex-col p-8 pl-12 border-b border-gray-300">
         {lessons.map((lesson, index) => (
           <div
             key={`${lesson.name}-index`}
@@ -60,6 +60,10 @@ const Sidebar = () => {
             )}
           </div>
         ))}
+      </div>
+      <div className="flex items-center mt-8 ml-12">
+        <Image src="/assets/back-arrow.png" width={10} height={10} alt="Back" className="w-2 h-4"/>
+        <span className="text-royal ml-4 text-sm">Go Back Home</span>
       </div>
     </div>
   );

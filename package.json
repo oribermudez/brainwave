@@ -10,8 +10,10 @@
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.10.0",
+    "@heroicons/react": "^1.0.6",
     "@material-tailwind/react": "^2.1.4",
     "next": "14.0.1",
+    "prism-react-renderer": "^2.3.0",
     "react": "^18",
     "react-dom": "^18",
     "react-dom-confetti": "^0.2.0"

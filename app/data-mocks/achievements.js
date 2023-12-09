@@ -1,5 +1,14 @@
 const achievements = [
   {
+    id: "achievement0",
+    name: "JavaScript Pioneer",
+    image: "/assets/medal0.png",
+    module: "JavaScript Intro",
+    exp: 150,
+    date: "2023-12-07",
+    description: "Embarked on the journey into the exciting world of JavaScript, mastering its foundational concepts and understanding its crucial role in web development."
+  },
+  {
     id: "achievement1",
     name: "String Master",
     image: "/assets/medal1.png",

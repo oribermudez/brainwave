@@ -1,9 +1,14 @@
+"use client"
+
 import Image from "next/image";
 
 import Sidebar from "@/app/components/content/Sidebar";
 import Breadcrumbs from "@/app/components/content/Breadcrums";
 import Quiz from "@/app/components/content/Quiz";
 import quizzes from "@/app/data-mocks/quizzes";
+import PreviousNext from "@/app/components/content/PreviousNext";
+import LessonComplete from "@/app/components/content/LessonComplete";
+import lessons from "@/app/data-mocks/lessons";
 
 const Page = () => {
   return (
@@ -101,6 +106,8 @@ const Page = () => {
           options={quizzes.ecmascript.options}
           correctOption={quizzes.ecmascript.correctAnswer}
         />
+        <LessonComplete achievementId={lessons[0].achievement} />
+        <PreviousNext previous={lessons[0].previous} next={lessons[0].next} />
       </div>
     </div>
   );
