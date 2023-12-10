@@ -5,7 +5,7 @@ import Image from "next/image";
 import Sidebar from "@/app/components/content/Sidebar";
 import Breadcrumbs from "@/app/components/content/Breadcrums";
 import Quiz from "@/app/components/content/Quiz";
-import quizzes from "@/app/data-mocks/quizzes";
+import { moduleOne } from "@/app/data-mocks/quizzes";
 import PreviousNext from "@/app/components/content/PreviousNext";
 import LessonComplete from "@/app/components/content/LessonComplete";
 import lessons from "@/app/data-mocks/lessons";
@@ -49,7 +49,7 @@ const Page = () => {
           important to know that JavaScript is a whole different language from Java. Now, let&apos;s see an official definition:
         </p>
         <p className="bg-emerald/20 p-6 text-royal rounded my-8">
-          <strong>JavaScript</strong> is a dynamic, lightweight, interpreted, and high-level programming language that uses first class functions.
+          <strong>JavaScript</strong> is a lightweight, dynamically typed, interpreted, and high-level programming language that uses first class functions.
         </p>
         <p className="my-8">
           It is considered <strong>lightweight</strong>, demanding minimal memory usage during execution, ensuring efficiency in its operations.
@@ -86,26 +86,16 @@ const Page = () => {
           and address emerging challenges in software development.
         </p>
         <h3 className="text-royal font-bold text-2xl my-8">Quiz</h3>
-        <Quiz
-          question={quizzes.javascript.question}
-          options={quizzes.javascript.options}
-          correctOption={quizzes.javascript.correctAnswer}
-        />
-        <Quiz
-          question={quizzes.interpreted.question}
-          options={quizzes.interpreted.options}
-          correctOption={quizzes.interpreted.correctAnswer}
-        />
-        <Quiz
-          question={quizzes.firstClass.question}
-          options={quizzes.firstClass.options}
-          correctOption={quizzes.firstClass.correctAnswer}
-        />
-        <Quiz
-          question={quizzes.ecmascript.question}
-          options={quizzes.ecmascript.options}
-          correctOption={quizzes.ecmascript.correctAnswer}
-        />
+        {moduleOne.map((quiz) => {
+          return(
+            <Quiz
+              key={quiz.id}
+              question={quiz.question}
+              options={quiz.options}
+              correctOption={quiz.correctAnswer}
+            />
+          );
+        })}
         <LessonComplete achievementId={lessons[0].achievement} />
         <PreviousNext previous={lessons[0].previous} next={lessons[0].next} />
       </div>

@@ -12,10 +12,18 @@ const assignVariable = `
   DATE_OF_BIRTH = "01/01/1995";
 `;
 
+const reAssignVariable = `
+  // Examples of assigning variables
+  name = "Alex";
+  age = 32;
+  DATE_OF_BIRTH = "01/11/1991";
+`;
+
 const initialization = `
   // Examples of initializing variables
-  let firstName = "Sam";
+  var firstName = "Sam";
   let lastName = "Smith";
+  const GRAVITY = 9.8;
 `;
 
 const camelCase = `
@@ -52,4 +60,4 @@ const startsWithLetter = `
   let 1stVariable; // Incorrect
 `;
 
-export { declareVariable, assignVariable, initialization, camelCase, meaningful, constants, reserved, startsWithLetter };
+export { declareVariable, assignVariable, reAssignVariable, initialization, camelCase, meaningful, constants, reserved, startsWithLetter };

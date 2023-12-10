@@ -10,6 +10,15 @@ const achievements = [
   },
   {
     id: "achievement1",
+    name: "Variable Virtuoso",
+    image: "/assets/medal4.png",
+    module: 2,
+    exp: 150,
+    date: "2023-12-15",
+    description: "Successfully navigated the realm of JavaScript variables, demonstrating mastery in their declaration, assignment, and understanding of scoping principles."
+  },
+  {
+    id: "achievement11",
     name: "String Master",
     image: "/assets/medal1.png",
     module: 1,

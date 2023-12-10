@@ -5,13 +5,13 @@ import Image from "next/image";
 import Sidebar from "@/app/components/content/Sidebar";
 import Breadcrumbs from "@/app/components/content/Breadcrums";
 import Quiz from "@/app/components/content/Quiz";
-import quizzes from "@/app/data-mocks/quizzes";
+import { moduleTwo } from "@/app/data-mocks/quizzes";
 import PreviousNext from "@/app/components/content/PreviousNext";
 import LessonComplete from "@/app/components/content/LessonComplete";
 import lessons from "@/app/data-mocks/lessons";
 import CodeHighlighter from "@/app/components/content/CodeHighlighter";
 import VarLetConst from "@/app/components/content/VarLetConst";
-import { declareVariable, assignVariable, camelCase, meaningful, constants, reserved, startsWithLetter, initialization } from "./codeExamples";
+import { declareVariable, assignVariable, camelCase, meaningful, constants, reserved, startsWithLetter, initialization, reAssignVariable } from "./codeExamples";
 
 const Page = () => {
   return (
@@ -65,6 +65,16 @@ const Page = () => {
         </div>
         <div className="flex justify-center items-center my-8">
           <Image src="/assets/assign.png" width={600} height={221} alt="Assignment" />
+        </div>
+        <p>
+          If you wish to modify the value of a variable, you can simply assign a new value to it. This is called <span className="bg-emerald/20 text-emerald-dark p-1 rounded">reassignment</span>.
+          The container&apos;s label (the variable&apos;s name) stays the same, but the contents change. 
+        </p>
+        <div className="flex justify-center items-center my-8">
+          <CodeHighlighter codeBlock={reAssignVariable} />
+        </div>
+        <div className="flex justify-center items-center my-8">
+          <Image src="/assets/reassign.png" width={600} height={221} alt="Assignment" />
         </div>
         <p>
           You can also declare and assign a value to a variable in a single line of code. This is called <span className="bg-emerald/20 text-emerald-dark p-1 rounded">initialization</span>.
@@ -180,6 +190,19 @@ const Page = () => {
             </div>
           </ul>
         </div>
+        <h3 className="text-royal font-bold text-2xl my-8">Quiz</h3>
+        {moduleTwo.map((quiz) => {
+          return(
+            <Quiz
+              key={quiz.id}
+              question={quiz.question}
+              options={quiz.options}
+              correctOption={quiz.correctAnswer}
+            />
+          );
+        })}
+        <LessonComplete achievementId={lessons[1].achievement} />
+        <PreviousNext previous={lessons[1].previous} next={lessons[1].next} />
       </div>
     </div>
   );
