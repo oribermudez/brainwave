@@ -17,7 +17,7 @@ const TABLE_ROWS = [
   },
   {
     feature: "Hoisting",
-    varVar: "Gets lifted to the top of its function scope",
+    varVar: "Gets lifted to the top of its containing scope",
     letVar: "Gets lifted to the top of its block scope",
     constVar: "Gets lifted to the top of its block scope",
   },
