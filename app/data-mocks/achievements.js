@@ -35,24 +35,24 @@ const achievements = [
     date: "2021-10-16",
     description: "Showcased exceptional skills in array manipulation, earning the esteemed title of Array Ninja."
   },
-  {
-    id: "achievement3",
-    name: "Object Whisperer",
-    image: "/assets/medal3.png",
-    module: 1,
-    exp: 100,
-    date: "2021-10-18",
-    description: "Mastered the intricacies of working with JavaScript objects, earning the prestigious title of Object Whisperer."
-  },
-  {
-    id: "achievement4",
-    name: "Functions Wizard",
-    image: "/assets/medal4.png",
-    module: 3,
-    exp: 100,
-    date: "2021-10-20",
-    description: "Ascended to the rank of Functions Wizard, demonstrating mastery over JavaScript functions."
-  },
+  // {
+  //   id: "achievement3",
+  //   name: "Object Whisperer",
+  //   image: "/assets/medal3.png",
+  //   module: 1,
+  //   exp: 100,
+  //   date: "2021-10-18",
+  //   description: "Mastered the intricacies of working with JavaScript objects, earning the prestigious title of Object Whisperer."
+  // },
+  // {
+  //   id: "achievement4",
+  //   name: "Functions Wizard",
+  //   image: "/assets/medal4.png",
+  //   module: 3,
+  //   exp: 100,
+  //   date: "2021-10-20",
+  //   description: "Ascended to the rank of Functions Wizard, demonstrating mastery over JavaScript functions."
+  // },
 ];
 
 export default achievements;

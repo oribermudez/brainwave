@@ -20,7 +20,7 @@ const LessonComplete = ({ achievementId }) => {
       const medal = achievements.find((achievement) => achievement.id === achievementId);
       setAchievement(medal);
     }
-  }, []);
+  }, [achievementId]);
 
   return (
     <>

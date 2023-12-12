@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Input,
   Card,
@@ -8,43 +8,60 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Image from "next/image";
+import { useRouter } from 'next/navigation';
+import { EyeIcon, EyeOffIcon } from '@heroicons/react/outline';
+import Link from "next/link";
 
 const SignIn = () => {
+  const router = useRouter();
+  const [validated, setValidated] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
   const [userData, setUserData] = useState({
-    firstName: '',
-    lastName: '',
     email: '',
     password: '',
-    agreeToTerms: false,
   });
+
+    const validateForm = () => {
+    return userData.email.trim() !== '' && userData.password.trim() !== '';
+  };
+
+  useEffect(() => {
+    setValidated(validateForm());
+  }, [userData, validateForm]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(userData);
-  
-    // try {
-    //   const response = await fetch('endpoint-url', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify(userData),
-    //   });
-  
-    //   if (response.ok) {
-    //     const data = await response.json();
-    //     // Handle the API response as needed.
-    //     console.log('API response:', data);
-    //   } else {
-    //     // Handle the API error response.
-    //     console.error('API error:', response.status, response.statusText);
-    //   }
-    // } catch (error) {
-    //   console.error('Error sending data:', error);
-    // }
+
+    if (!validated) {
+      console.error('Form validation failed. Email and password are required.');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        // Handle the successful API response as needed.
+        console.log('API response:', data);
+        
+        router.push('/');
+      } else {
+        // Handle the API error response.
+        console.error('API error:', response.status, response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending data:', error);
+    }
   };
-  
-  return (
+
+  return(
     <main className="flex min-h-screen flex-col items-center justify-center md:bg-login bg-cover bg-white">  
       <Image src="/assets/brand.png" width={330} height={64} alt="logo" className="mb-8" priority />    
       <Card color="transparent" shadow={false}>
@@ -67,19 +84,31 @@ const SignIn = () => {
             />
             <Input
               variant="standard"
-              type="password"
+              type={showPassword ? 'text' : 'password'}
               label="Password"
               color="teal"
               value={userData.password}
               onChange={(e) => setUserData({ ...userData, password: e.target.value })}
+              icon={
+                <button type="button" className={`${userData.password ? 'block' : 'hidden'}`} onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <EyeOffIcon className="h-5 w-5 text-emerald" /> : <EyeIcon className="h-5 w-5 text-emerald" />}
+                </button>
+              }
             /> 
           </div>
        
-          <Button type="submit" className="mt-4 bg-emerald !capitalize text-sm !font-semibold" fullWidth onClick={handleSubmit}>
+          <Button type="submit" className={`mt-4 ${ validated ? 'bg-emerald' : 'bg-gray-400' } !capitalize text-sm !font-semibold`} fullWidth onClick={handleSubmit}>
             Sign In
           </Button>
 
-          <div className="flex justify-around items-center py-4">
+          <div className="text-center text-xs font-normal text-gray-400 mt-8">
+            Don&apos;t have an account?
+            <Link href="/signup" className="text-emerald ml-1">
+              Sign Up
+            </Link>
+          </div>
+
+          {/* <div className="flex justify-around items-center py-4">
             <Image src="/assets/divider.png" width={90} height={1} alt="Divider"/> 
             <Typography  className="text-center font-normal text-[#8c9096]">
               or
@@ -89,7 +118,7 @@ const SignIn = () => {
           
           <Button className="bg-black !capitalize text-sm !font-semibold" fullWidth>
             Sign In with Github
-          </Button>
+          </Button> */}
         </form>
       </Card>
     </main>
